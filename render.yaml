@@ -1,0 +1,19 @@
+# Demo only: no paid compute or persistent disk is requested.
+# Shared records are ephemeral until you configure persistent storage yourself.
+services:
+  - type: web
+    name: lingdang-echo-studio
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: ECHO_HOST
+        value: "0.0.0.0"
+      - key: ECHO_DATA_DIR
+        value: /tmp/lingdang-echo
+      - key: ECHO_ALLOWED_ORIGIN
+        sync: false

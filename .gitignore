@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.echo/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+worker/assets.generated.mjs
+.openai/*.local.*

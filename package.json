@@ -1,0 +1,23 @@
+{
+  "name": "lingdang-echo-studio",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node scripts/test-hub.mjs && node scripts/test-room-client.mjs && node scripts/test-avatar-loaders.mjs",
+    "smoke": "npm test"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}
